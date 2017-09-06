@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +29,20 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Button login = (Button)findViewById(R.id.button);
+        final EditText user = (EditText)findViewById(R.id.editText);
+        final EditText password = (EditText)findViewById(R.id.editText2);
+
+        login.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Log.d("User", user.getText().toString());
+                        Log.d("Password", password.getText().toString());
+                    }
+                }
+        );
     }
 
     @Override

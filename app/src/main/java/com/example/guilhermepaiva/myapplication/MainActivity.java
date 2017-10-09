@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                shareIntent();
             }
         });
 
@@ -161,5 +161,11 @@ public class MainActivity extends AppCompatActivity {
         db.close();
 
         return true;
+    }
+
+    private void shareIntent() {
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        startActivity(Intent.createChooser(sharingIntent, "Sharear"));
     }
 }

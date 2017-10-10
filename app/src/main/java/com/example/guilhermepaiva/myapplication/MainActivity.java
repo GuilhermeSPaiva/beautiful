@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                shareIntent();
+                contactIntent();
             }
         });
 
@@ -167,5 +167,10 @@ public class MainActivity extends AppCompatActivity {
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         startActivity(Intent.createChooser(sharingIntent, "Sharear"));
+    }
+
+    private void contactIntent() {
+        Intent secondActivity = new Intent(this, ContactListActivity.class);
+        startActivity(secondActivity);
     }
 }

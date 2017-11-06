@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/guilhermepaiva/Documents/BCC/Dispositivos Móveis/MapsApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/guilhermepaiva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/9bf49290ea2b8cb125a9486745d85131/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}
